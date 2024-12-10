@@ -4,6 +4,8 @@ int x;
         x=y;
     }
 
+
+
     public static void main(String[]args){
         Constructors var=new Constructors(32);
         System.out.println(var.x);
