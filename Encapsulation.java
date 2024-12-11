@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Encapsulation {
     private String name;
     private String energy;
