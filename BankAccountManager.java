@@ -1,6 +1,7 @@
 package Javadev;
 
 import java.sql.SQLOutput;
+import java.util.Scanner;
 
 public class BankAccountManager {
     private String accountNumber;
@@ -32,13 +33,13 @@ public class BankAccountManager {
         this.balance=balance;
     }
 
-    public void deposit(int amount){
+    public void deposit(double amount){
     balance+=amount;
     transaction=true;
     System.out.println("Deposit was successful. Your new balance is: GHc"+balance);
     }
 
-    public void withdraw(int amount) {
+    public void withdraw(double amount) {
         if (balance >= amount) {
             balance -= amount;
             transaction = true;
@@ -60,11 +61,18 @@ public class BankAccountManager {
     }
     public static void main(String[] args){
         BankAccountManager bank= new BankAccountManager();
+        Scanner scan= new Scanner();
         int userChoice;
         System.out.println("Welcome to your banking system!\n" +
                 "Please choose from the options below");
         System.out.println(options());
-        if
+        userChoice=scan.nextInt();
+        if(userChoice==1){
+            double amount=0;
+            System.out.println("Please enter the amount you want to deposit");
+            amount=scan.nextDouble();
+            bank.deposit(amount);
+        }
 
     }
 }
