@@ -1,7 +1,7 @@
 package Javadev;
 
 public class Car {
-    private String engine;
+    private String engine="12";
     private String distanceTravelled;
 
     public String getEngine() {
