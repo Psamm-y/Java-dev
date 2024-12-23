@@ -63,19 +63,43 @@ public class BankAccountManager {
         BankAccountManager bank= new BankAccountManager();
         Scanner scan=new Scanner(System.in);
         int userChoice;
+        int userAttempts=3;
         double amount=0;
+        String input;
         System.out.println("Welcome to your banking system!\n" +
                 "Please choose from the options below");
-        System.out.println(options());
-        userChoice=scan.nextInt();
-        if(userChoice==1){
-            System.out.println("Please enter the amount you want to deposit");
-            amount=scan.nextDouble();
-            bank.deposit(amount);
-        }else if (userChoice==2){
-            System.out.println("Please enter the amount you want to withdraw");
-            amount=scan.nextDouble();
-        }
 
+
+        while (userAttempts<=3) {
+            userAttempts--;
+
+
+            System.out.println(options());
+            userChoice=scan.nextInt();
+            if (userChoice == 1) {
+                System.out.println("Please enter the amount you want to deposit");
+                amount = scan.nextDouble();
+                bank.deposit(amount);
+            } else if (userChoice == 2) {
+                System.out.println("Please enter the amount you want to withdraw");
+                amount = scan.nextDouble();
+                bank.withdraw(amount);
+            } else if (userChoice == 3) {
+                System.out.println(bank.checkBalance());
+            } else {
+                System.out.println("Please enter a valid option");
+                continue;
+            }
+            System.out.println("Thank you!");
+            System.out.println("Is there anything else you'd like to do?[Y/N]");
+            scan.nextLine();
+            if (scan.nextLine().equalsIgnoreCase("Y")){
+                continue;
+            }
+            else{
+                break;
+            }
+
+        }
     }
 }
