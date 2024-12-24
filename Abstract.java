@@ -6,4 +6,10 @@ public abstract class Abstract {
         System.out.println("Zzzzzz");
     };
 
+    class subAbstract extends Abstract{
+        public void classA(){
+            System.out.println("Hurrayyy!");
+
+        }
+    }
 }
