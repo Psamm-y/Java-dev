@@ -7,6 +7,7 @@ class OuterClass {
     }
 }
 
+
 public class NestedClass {
     public static void main(String[] args) {
         OuterClass myOuter = new OuterClass();

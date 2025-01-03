@@ -11,5 +11,7 @@ public abstract class Abstract {
             System.out.println("Hurrayyy!");
 
         }
+
+        
     }
 }
