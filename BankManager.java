@@ -2,21 +2,34 @@ package Javadev;
 
 import org.w3c.dom.ls.LSOutput;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class BankManager {
-    public BankManager(double balance, double depositamount, String accountHoldername) {
+    public BankManager(double balance, double depositamount, String accountHoldername,String email) {
         this.balance = balance;
         this.depositamount = depositamount;
         this.accountHoldername = accountHoldername;
+        this.email=email;
     }
 
     private double balance;
     private double depositamount;
     private String accountHoldername;
+    private String email;
 
 
+    public void setEmail(){
+        this.email=email;
+    }
+
+    public String getEmail(){
+        return email;
+    }
     public double getBalance() {
         return balance;
     }
@@ -42,42 +55,55 @@ public class BankManager {
     }
 
 
-    public static String showOptions(){
+    public static String showOptions() {
         return "1.Deposit \n" +
                 "2.Withdraw \n" +
                 "3.Check Balance";
     }
-    public void deposit(double amount){
-        balance+=amount;
+
+    public void deposit(double amount) {
+        balance += amount;
         System.out.println("Deposit was successful");
-        System.out.println("Your current balance is "+ balance);
+        System.out.println("Your current balance is " + balance);
     }
 
-    public void withdraw(int amount){
-        balance-=amount;
+    public void withdraw(int amount) {
+        balance -= amount;
         System.out.println("Withdrawal successful");
-        System.out.println("New balance: "+ balance);
-    }
-public String checkBalance(){
-    return "Your current balance is: "+balance;
-}
-
-public static void main( String[] args){
-    System.out.println("Welcome to Psammy Bank.\n\n" +
-            "Please take a few  moment to register with us");
-    System.out.println("1.Register\n" +
-            "2.Cancel");
-    Scanner scan = new Scanner(System.in);
-
-    int input = scan.nextInt();
-
-    //condition for registration input
-    if(input==1){
-        System.out.println("Please enter your name: ");
-    }else {
-        System.out.println("Operation cancelled");
+        System.out.println("New balance: " + balance);
     }
 
-}
+    public String checkBalance() {
+        return "Your current balance is: " + balance;
+    }
+
+    public static void main(String[] args) throws IOException {
+
+        System.out.println("Welcome to Psammy Bank.\n\n" +
+                "Please take a few moment to register with us");
+        System.out.println("1.Register\n" +
+                "2.Cancel");
+        InputStreamReader input = new InputStreamReader(System.in);
+        BufferedReader bf = new BufferedReader(input);
+
+        int userInput = Integer.parseInt(bf.readLine());
+
+
+        //condition for registration input
+        if (userInput == 1) {
+            System.out.println("Please enter your name: ");
+            String name = bf.readLine();
+            System.out.println("Please input your email");
+            String email = bf.readLine();
+
+            BankManager bank = new BankManager(0.0,0.0,name,email);
+            System.out.println("Registration was successful!" +
+                    "Welcome "+ bank.accountHoldername);
+
+        } else {
+            System.out.println("Operation cancelled");
+        }
+
+    }
 
 }
