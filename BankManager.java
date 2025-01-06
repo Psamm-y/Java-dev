@@ -129,8 +129,9 @@ public class BankManager {
                     }
                     attempts++;
                 }
+            }else{
+                System.out.println("Operation cancelled");
             }
-
         } else {
             System.out.println("Operation cancelled");
         }
