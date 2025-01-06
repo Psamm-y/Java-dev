@@ -91,15 +91,21 @@ public class BankManager {
 
         //condition for registration input
         if (userInput == 1) {
-            System.out.println("Please enter your name: ");
-            String name = bf.readLine();
+            System.out.println("Please enter first name: ");
+            String fname = bf.readLine();
+
+            System.out.println("Please enter last name: ");
+            String lname = bf.readLine();
+
+            String name= fname+ " "+lname;
             System.out.println("Please input your email");
             String email = bf.readLine();
 
             BankManager bank = new BankManager(0.0,0.0,name,email);
-            System.out.println("Registration was successful!" +
-                    "Welcome "+ bank.accountHoldername);
+            System.out.println("First part of registration completed! " +
+                    "Welcome "+ bank.getAccountHoldername());
 
+            System.out.println("bank.");
         } else {
             System.out.println("Operation cancelled");
         }
