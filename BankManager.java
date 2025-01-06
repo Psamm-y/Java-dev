@@ -64,7 +64,7 @@ public class BankManager {
     public void deposit(double amount) {
         balance += amount;
         System.out.println("Deposit was successful");
-        System.out.println("Your current balance is " + balance);
+        System.out.println("Your current balance is " + getBalance());
     }
 
     public void withdraw(int amount) {
@@ -105,14 +105,30 @@ public class BankManager {
             System.out.println("First part of registration completed! " +
                     "Welcome "+ bank.getAccountHoldername());
 
-            System.out.println("Please continue to complete your registration \n\n");
+            System.out.println("Please continue to complete your registration \n");
             System.out.println("As part of your registration, you're supposed to deposit " +
                     "an amount of not less than  GH₵5 \n"+
-            "Enter 1 to continue or \n 0 to cancel");
+            "Enter 1 to continue or \n0 to cancel");
             userInput=Integer.parseInt(bf.readLine()); //input from user
 
             //condition to process deposit or not
-            if ()
+            if (userInput==1){
+
+                int attempts =0;
+                while (attempts<=3){ //user can try again 3 times
+                    System.out.println("Enter amount to deposit");
+                    double amount= Double.parseDouble(bf.readLine());
+
+                    if(amount>=5){
+                        bank.balance+=amount;
+                        bank.deposit(amount);
+                        break;
+                    } else {
+                        System.out.println("Amount cannot be less than GH₵5");
+                    }
+                    attempts++;
+                }
+            }
 
         } else {
             System.out.println("Operation cancelled");
