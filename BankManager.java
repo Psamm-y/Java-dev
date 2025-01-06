@@ -111,6 +111,8 @@ public class BankManager {
             "Enter 1 to continue or \n0 to cancel");
             userInput=Integer.parseInt(bf.readLine()); //input from user
 
+
+            System.out.println(bank.balance);
             //condition to process deposit or not
             if (userInput==1){
 
@@ -120,7 +122,6 @@ public class BankManager {
                     double amount= Double.parseDouble(bf.readLine());
 
                     if(amount>=5){
-                        bank.balance+=amount;
                         bank.deposit(amount);
                         break;
                     } else {
