@@ -105,7 +105,15 @@ public class BankManager {
             System.out.println("First part of registration completed! " +
                     "Welcome "+ bank.getAccountHoldername());
 
-            System.out.println("bank.");
+            System.out.println("Please continue to complete your registration \n\n");
+            System.out.println("As part of your registration, you're supposed to deposit " +
+                    "an amount of not less than  GH₵5 \n"+
+            "Enter 1 to continue or \n 0 to cancel");
+            userInput=Integer.parseInt(bf.readLine()); //input from user
+
+            //condition to process deposit or not
+            if ()
+
         } else {
             System.out.println("Operation cancelled");
         }
