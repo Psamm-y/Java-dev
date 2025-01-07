@@ -1,5 +1,4 @@
-import javax.swing.plaf.synth.SynthRadioButtonMenuItemUI;
-
+package Javadev;
 public class Bank {
     private String accountNumber;
     private String accountHolderName;
