@@ -4,10 +4,8 @@ import org.w3c.dom.ls.LSOutput;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.sql.SQLOutput;
-import java.util.Scanner;
+
 
 public class BankManager {
     public BankManager(double balance, double depositamount, String accountHoldername,String email) {
