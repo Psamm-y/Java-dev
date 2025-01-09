@@ -138,7 +138,7 @@ public class BankManager {
         } else {
             System.out.println("Operation cancelled");
         }
-        if (bank!=null){ //condition to check if user has registered to continue
+        if (bank!=null && bank.getBalance()!=0.0){ //condition to check if user has registered to continue
             System.out.println("Registration complete! What do you wanna do?");
             System.out.println(showOptions());
             userInput=Integer.parseInt(bf.readLine());
@@ -151,9 +151,15 @@ public class BankManager {
             }else if(userInput==2 ){ //if user is registered and there's enough in their account
                 System.out.println("How much do you want to withdraw?");
                 double wAmount= Double.parseDouble(bf.readLine());
-                if (bank.getBalance()>=wAmount){
-                    bank.withdraw(wAmount);
+                for(int i=1;i<=3;i++){
+                    if (bank.getBalance()>=wAmount){
+                        bank.withdraw(wAmount);
+                        break;
+                    }else{
+                        System.out.println("Your current balance is: "+bank.getBalance()+ " Please withdraw a lesser amount");
+                    }
                 }
+
             }
         }
 
