@@ -21,7 +21,7 @@ public class BankManager {
     private String email;
 
 
-    public void setEmail(){
+    public void setEmail(String email){
         this.email=email;
     }
 
@@ -83,6 +83,8 @@ public class BankManager {
                 "2.Cancel");
         InputStreamReader input = new InputStreamReader(System.in);
         BufferedReader bf = new BufferedReader(input);
+        BankManager bank = null;
+
 
         int userInput = Integer.parseInt(bf.readLine());
 
@@ -95,11 +97,13 @@ public class BankManager {
             System.out.println("Please enter last name: ");
             String lname = bf.readLine();
 
-            String name= fname+ " "+lname;
-            System.out.println("Please input your email");
-            String email = bf.readLine();
+            String name = fname+" "+ lname;
 
-            BankManager bank = new BankManager(0.0,0.0,name,email);
+            bank=new BankManager(0.0,0.0,name,null);
+            System.out.println("Please input your email");
+            String email=bf.readLine();
+            bank.setEmail(email);
+
             System.out.println("First part of registration completed! " +
                     "Welcome "+ bank.getAccountHoldername());
 
@@ -134,6 +138,18 @@ public class BankManager {
         } else {
             System.out.println("Operation cancelled");
         }
+        if (bank!=null){ //condition to check if user has registered to continue
+            System.out.println("Registration complete! What do you wanna do?");
+            System.out.println(showOptions());
+            userInput=Integer.parseInt(bf.readLine());
+
+            if (userInput==1){ //if user is registered,they can deposit
+                System.out.println("Please enter the amount you'd want to deposit: ");
+                double amount =Double.parseDouble(bf.readLine());
+                bank.deposit(amount);
+            }else if(userInput)
+        }
+
 
     }
 
