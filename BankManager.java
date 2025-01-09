@@ -107,10 +107,11 @@ public class BankManager {
             System.out.println("As part of your registration, you're supposed to deposit \n" +
                     "an amount of not less than GH₵5. \n"+
             "Enter 1 to continue or \n0 to cancel");
-            userInput=Integer.parseInt(bf.readLine()); //input from user
-
+            userInput=Integer.parseInt(bf.readLine()); //convert input from user(String) to int
 
             System.out.println(bank.balance);
+
+
             //condition to process deposit or not
             if (userInput==1){
 
@@ -134,7 +135,6 @@ public class BankManager {
             System.out.println("Operation cancelled");
         }
 
-        
     }
 
 }
