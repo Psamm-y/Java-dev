@@ -120,7 +120,7 @@ public class BankManager {
             if (userInput==1){
 
                 int attempts =0;
-                while (attempts<=3){ //user can try again 3 times
+                while (attempts<3){ //user can try again 3 times
                     System.out.println("Enter amount to deposit");
                     double amount= Double.parseDouble(bf.readLine());
 
