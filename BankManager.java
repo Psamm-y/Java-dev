@@ -65,7 +65,7 @@ public class BankManager {
         System.out.println("Your current balance is " + getBalance());
     }
 
-    public void withdraw(int amount) {
+    public void withdraw(double amount) {
         balance -= amount;
         System.out.println("Withdrawal successful");
         System.out.println("New balance: " + balance);
@@ -145,9 +145,16 @@ public class BankManager {
 
             if (userInput==1){ //if user is registered,they can deposit
                 System.out.println("Please enter the amount you'd want to deposit: ");
-                double amount =Double.parseDouble(bf.readLine());
-                bank.deposit(amount);
-            }else if(userInput)
+                double dAmount =Double.parseDouble(bf.readLine());
+                bank.deposit(dAmount);
+
+            }else if(userInput==2 ){ //if user is registered and there's enough in their account
+                System.out.println("How much do you want to withdraw?");
+                double wAmount= Double.parseDouble(bf.readLine());
+                if (bank.getBalance()>=wAmount){
+                    bank.withdraw(wAmount);
+                }
+            }
         }
 
 
