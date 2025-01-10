@@ -162,7 +162,7 @@ public class BankManager {
 
             }
         }
-
+        bf.close();
 
     }
 

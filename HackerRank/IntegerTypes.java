@@ -10,6 +10,6 @@ public class IntegerTypes {
         String userNumber= scan.nextLine();
        double myLongNumber= Math.pow(2,63);
 
-       
+       scan.close();
     }
 }
