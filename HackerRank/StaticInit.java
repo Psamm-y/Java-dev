@@ -1,10 +1,9 @@
-package Javadev.HackerRank;/*
+
 package Javadev.HackerRank;
 
 import java.util.Scanner;
 
 public class StaticInit {
-    */
 /*Static initialization blocks are executed when the class is loaded, and you can initialize static variables in those blocks.
 
 It's time to test your knowledge of Static initialization blocks. You can read about it here.
@@ -21,9 +20,9 @@ Constraints
 
 Output Format
 
-If both values are greater than zero, then the main method must output the area of the parallelogram. Otherwise, print "java.lang.Exception: Breadth and height must be positive" without quotes.*//*
+If both values are greater than zero, then the main method must output the area of the parallelogram. Otherwise, print "java.lang.Exception: Breadth and height must be positive" without quotes.*/
 
-static double areaOfParallelogram(int height, int breadth){
+static int areaOfParallelogram(int height, int breadth){
     return height*breadth;
 }
     public static void main (String[] args){
@@ -40,26 +39,4 @@ static double areaOfParallelogram(int height, int breadth){
         scan.close();
     }
 }
-*/
 
-import java.io.*;
-import java.util.*;
-
-public class StaticInit {
-
-    public static void main(String[] args) {
-        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
-        Scanner scan= new Scanner(System.in);
-        String word= scan.next();
-        StringBuilder rev = new StringBuilder();
-        for(int i=word.length()-1;i==0;i--){
-            rev.append(word.charAt(i));
-        }
-
-        String revWord= rev.toString();
-        System.out.println(revWord);
-        if (word.equals(rev)){
-            System.out.println("Yes");
-        }
-    }
-}
