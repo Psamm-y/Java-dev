@@ -8,8 +8,7 @@ public class IntegerTypes {
         Scanner scan = new Scanner(System.in);
 
         String userNumber= scan.nextLine();
-       double myLongNumber= Math.pow(2,63);
-
+     
        scan.close();
     }
 }
