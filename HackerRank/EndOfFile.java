@@ -8,5 +8,6 @@ public class EndOfFile {
         while(scan.hasNextLine()){
             System.out.println("1 "+ scan.nextLine());
         }
+        scan.close();
     }
 }

@@ -8,7 +8,7 @@ public class IntegerTypes {
         Scanner scan = new Scanner(System.in);
 
         String userNumber= scan.nextLine();
-     
+
        scan.close();
     }
 }
