@@ -94,7 +94,6 @@ public class BankAccountManager {
             System.out.println("Is there anything else you'd like to do?[Y/N]");
             scan.nextLine();
             if (scan.nextLine().equalsIgnoreCase("Y")){
-                continue;
             }
             else{
                 break;
