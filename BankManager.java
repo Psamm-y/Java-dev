@@ -161,6 +161,7 @@ public class BankManager {
                 }
 
             }
+            System.out.println("Is there anything else you'd want to do [Y/N]");
         }
         bf.close();
 
