@@ -138,30 +138,38 @@ public class BankManager {
         } else {
             System.out.println("Operation cancelled");
         }
-        if (bank!=null && bank.getBalance()!=0.0){ //condition to check if user has registered to continue
-            System.out.println("Registration complete! What do you wanna do?");
-            System.out.println(showOptions());
-            userInput=Integer.parseInt(bf.readLine());
+        while(true) {
+            if (bank != null && bank.getBalance() != 0.0) { //condition to check if user has registered to continue
+                System.out.println("Registration complete! What do you wanna do?");
+                System.out.println(showOptions());
+                userInput = Integer.parseInt(bf.readLine());
 
-            if (userInput==1){ //if user is registered,they can deposit
-                System.out.println("Please enter the amount you'd want to deposit: ");
-                double dAmount =Double.parseDouble(bf.readLine());
-                bank.deposit(dAmount);
+                if (userInput == 1) { //if user is registered,they can deposit
+                    System.out.println("Please enter the amount you'd want to deposit: ");
+                    double dAmount = Double.parseDouble(bf.readLine());
+                    bank.deposit(dAmount);
 
-            }else if(userInput==2 ){ //if user is registered and there's enough in their account
-                System.out.println("How much do you want to withdraw?");
-                double wAmount= Double.parseDouble(bf.readLine());
-                for(int i=1;i<=3;i++){
-                    if (bank.getBalance()>=wAmount){
-                        bank.withdraw(wAmount);
-                        break;
-                    }else{
-                        System.out.println("Your current balance is: "+bank.getBalance()+ " Please withdraw a lesser amount");
+                } else if (userInput == 2) { //if user is registered and there's enough in their account
+                    System.out.println("How much do you want to withdraw?");
+                    double wAmount = Double.parseDouble(bf.readLine());
+                    for (int i = 1; i <= 3; i++) {
+                        if (bank.getBalance() >= wAmount) {
+                            bank.withdraw(wAmount);
+                            break;
+                        } else {
+                            System.out.println("Your current balance is: " + bank.getBalance() + " Please withdraw a lesser amount");
+                        }
                     }
-                }
 
+                }
+                System.out.println("Is there anything else you'd want to do [Y/N]");
+                String userChoice = bf.readLine().trim();
+                if (userChoice.equalsIgnoreCase("y")) {
+                    
+                } else {
+                    break;
+                }
             }
-            System.out.println("Is there anything else you'd want to do [Y/N]");
         }
         bf.close();
 
