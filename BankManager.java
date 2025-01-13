@@ -165,7 +165,6 @@ public class BankManager {
                 System.out.println("Is there anything else you'd want to do [Y/N]");
                 String userChoice = bf.readLine().trim();
                 if (userChoice.equalsIgnoreCase("y")) {
-                    
                 } else {
                     break;
                 }
