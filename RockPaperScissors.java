@@ -1,5 +1,7 @@
 package Javadev;
 
+import java.util.Scanner;
+
 public class RockPaperScissors {
     private String userChoice;
 
@@ -29,8 +31,10 @@ public class RockPaperScissors {
                 "Please select from the options below");
         System.out.println(showOptions());
         RockPaperScissors rps = new RockPaperScissors(); // object of class
+        Scanner scan = new Scanner(System.in);
+        rps.setUserChoice(scan.next()); //user selection received as string
 
-        rps.setUserChoice();
+
 
     }
 }
