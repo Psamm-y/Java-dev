@@ -126,6 +126,8 @@ public class BankManager {
 
                     if(amount>=5){
                         bank.deposit(amount);
+                        System.out.println("Registration complete! What do you wanna do?");
+
                         break;
                     } else {
                         System.out.println("Amount cannot be less than GH₵5");
@@ -140,7 +142,6 @@ public class BankManager {
         }
         while(true) {
             if (bank != null && bank.getBalance() != 0.0) { //condition to check if user has registered to continue
-                System.out.println("Registration complete! What do you wanna do?");
                 System.out.println(showOptions());
                 userInput = Integer.parseInt(bf.readLine());
 
