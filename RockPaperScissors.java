@@ -31,7 +31,12 @@ public void setUserSelection(int userSelection) {
     private String computerChoice;
     public static String showOptions(){
         return "1. Start game\n" +
-                "2. Cancel and exit";
+                "2. How to play"+
+                "3. Cancel and exit";
+    }
+    public static String showHelp(){
+        return "\"R\" or \"r\"  => Rock \n" +
+                "\"P\" or \"p\"  => Paper \n";
     }
     public static void main (String[] args){
         System.out.println("Welcome to the Rock Paper Scissors game " +
@@ -43,7 +48,7 @@ public void setUserSelection(int userSelection) {
 
         if (rps.getUserSelection()==1){ //Game starts here!
             String[] options= {"Rock", "Paper", "Scissors"};
-            System.out.println();
+            System.out.println("Rock, Paper, Scissors!Please enter your choice");
         }
 
     }
