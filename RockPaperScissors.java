@@ -8,7 +8,14 @@ public class RockPaperScissors {
     public String getUserChoice() {
         return userChoice;
     }
-
+    
+    private int userSelection;
+public int getUserSelection(){
+        return userSelection;
+}
+public void setUserSelection(int userSelection) {
+        this.userSelection = userSelection;
+    }
     public void setUserChoice(String userChoice) {
         this.userChoice = userChoice;
     }
@@ -34,7 +41,7 @@ public class RockPaperScissors {
         Scanner scan = new Scanner(System.in);
         rps.setUserChoice(scan.next()); //user selection received as string
 
-
+        if (rps.Integer.parseInt(getUserChoice()))
 
     }
 }
