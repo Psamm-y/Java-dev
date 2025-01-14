@@ -8,7 +8,7 @@ public class RockPaperScissors {
     public String getUserChoice() {
         return userChoice;
     }
-    
+
     private int userSelection;
 public int getUserSelection(){
         return userSelection;
@@ -41,7 +41,10 @@ public void setUserSelection(int userSelection) {
         Scanner scan = new Scanner(System.in);
         rps.setUserChoice(scan.next()); //user selection received as string
 
-        if (rps.Integer.parseInt(getUserChoice()))
+        if (rps.getUserSelection()==1){ //Game starts here!
+            String[] options= {"Rock", "Paper", "Scissors"};
+            System.out.println();
+        }
 
     }
 }
