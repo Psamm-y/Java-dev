@@ -40,6 +40,7 @@ public void setUserSelection(int userSelection) {
                 "\"P\" or \"p\"  => Paper \n" +
                 "\"S\" or \"s\"  => Scissors \n";
     }
+
     public static void main (String[] args){
         System.out.println("Welcome to the Rock Paper Scissors game " +
                 "Please select from the options below");
@@ -60,7 +61,14 @@ public void setUserSelection(int userSelection) {
             String userC= rps.getUserChoice();
             String compC= rps.getComputerChoice();
             if (userC.equalsIgnoreCase("r")&&compC.equalsIgnoreCase("p")){
-                System.out.println("Paper beats rock.");
+                System.out.println("Paper beats rock. Computer Wins");
+            } else if (userC.equalsIgnoreCase("p")&&compC.equalsIgnoreCase("r")) {
+                System.out.println("Paper beats rock. User Wins");
+
+            } else if (userC.equalsIgnoreCase("r")&&compC.equalsIgnoreCase("s")) {
+                System.out.println();
+            } else if (userC.equalsIgnoreCase("s")&&compC.equalsIgnoreCase("r")) {
+                
             }
         }
 
