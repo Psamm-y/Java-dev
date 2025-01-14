@@ -159,6 +159,7 @@ public class BankManager {
                             break;
                         } else {
                             System.out.println("Your current balance is: " + bank.getBalance() + " Please withdraw a lesser amount");
+                            wAmount=Double.parseDouble(bf.readLine());
                         }
                     }
 
