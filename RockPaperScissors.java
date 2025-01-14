@@ -53,6 +53,7 @@ public void setUserSelection(int userSelection) {
             String[] options= {"Rock", "Paper", "Scissors"};
             System.out.println("Rock, Paper, Scissors! Please enter your choice");
             rps.setUserChoice(scan.next().trim()); //trim removes whitespaces
+            System.out.println("Computer's choice");
         }
 
     }
