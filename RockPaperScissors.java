@@ -68,7 +68,9 @@ public void setUserSelection(int userSelection) {
             } else if (userC.equalsIgnoreCase("r")&&compC.equalsIgnoreCase("s")) {
                 System.out.println();
             } else if (userC.equalsIgnoreCase("s")&&compC.equalsIgnoreCase("r")) {
-                
+                System.out.println();
+            }else if(userC.equalsIgnoreCase("s")&&compC.equalsIgnoreCase("p")){
+                System.out.println();
             }
         }
 
