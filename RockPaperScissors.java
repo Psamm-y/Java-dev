@@ -61,16 +61,19 @@ public void setUserSelection(int userSelection) {
             String userC= rps.getUserChoice();
             String compC= rps.getComputerChoice();
             if (userC.equalsIgnoreCase("r")&&compC.equalsIgnoreCase("p")){
-                System.out.println("Paper beats rock. Computer Wins");
+                System.out.println("Paper beats rock. Computer wins");
             } else if (userC.equalsIgnoreCase("p")&&compC.equalsIgnoreCase("r")) {
-                System.out.println("Paper beats rock. User Wins");
-
+                System.out.println("Paper beats rock. User ins");
             } else if (userC.equalsIgnoreCase("r")&&compC.equalsIgnoreCase("s")) {
                 System.out.println();
             } else if (userC.equalsIgnoreCase("s")&&compC.equalsIgnoreCase("r")) {
-                System.out.println();
+                System.out.println("Rock beats Scissors");
             }else if(userC.equalsIgnoreCase("s")&&compC.equalsIgnoreCase("p")){
-                System.out.println();
+                System.out.println("Scissors beats paper. User wins");
+            }else if(userC.equalsIgnoreCase("p")&&compC.equalsIgnoreCase("s")){
+                System.out.println("Scissors beats paper. Computer wins");
+            }else if(userC.equalsIgnoreCase(compC)){
+                System.out.println("Tie");
             }
         }
 
