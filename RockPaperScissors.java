@@ -32,7 +32,7 @@ public void setUserSelection(int userSelection) {
     private String computerChoice;
     public static String showOptions(){
         return "1. Start game\n" +
-                "2. Get Help"+
+                "2. Get Help\n"+
                 "3. Cancel and exit";
     }
     public static String showHelp(){
@@ -47,7 +47,7 @@ public void setUserSelection(int userSelection) {
         Random rand = new Random(); //random object
         RockPaperScissors rps = new RockPaperScissors(); // object of class
         Scanner scan = new Scanner(System.in);
-        rps.setUserChoice(scan.next()); //user selection received as string
+        rps.setUserSelection(scan.nextInt());
 
         if (rps.getUserSelection()==1){ //Game starts here!
             String[] options= {"Rock", "Paper", "Scissors"};
@@ -60,7 +60,7 @@ public void setUserSelection(int userSelection) {
             String userC= rps.getUserChoice();
             String compC= rps.getComputerChoice();
             if (userC.equalsIgnoreCase("r")&&compC.equalsIgnoreCase("p")){
-                System.out.println("Paper wins");
+                System.out.println("Paper beats rock.");
             }
         }
 
