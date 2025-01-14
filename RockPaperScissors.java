@@ -51,9 +51,10 @@ public void setUserSelection(int userSelection) {
 
         if (rps.getUserSelection()==1){ //Game starts here!
             String[] options= {"Rock", "Paper", "Scissors"};
+            int randomIndex =rand.nextInt(options.length); //generate random index form 0 to array length
             System.out.println("Rock, Paper, Scissors! Please enter your choice");
             rps.setUserChoice(scan.next().trim()); //trim removes whitespaces
-            System.out.println("Computer's choice");
+            System.out.println("Computer's choice:" );
         }
 
     }
