@@ -55,7 +55,13 @@ public void setUserSelection(int userSelection) {
             rps.setComputerChoice(options[randomIndex]); //set the computer's choice to a random index in the array
             System.out.println("Rock, Paper, Scissors! Please enter your choice");
             rps.setUserChoice(scan.next().trim()); //trim removes whitespaces
-            System.out.println("Computer's choice:" );
+            System.out.println("Computer's choice:"+ rps.getComputerChoice());
+
+            String userC= rps.getUserChoice();
+            String compC= rps.getComputerChoice();
+            if (userC.equalsIgnoreCase("r")&&compC.equalsIgnoreCase("p")){
+                System.out.println("Paper wins");
+            }
         }
 
     }
