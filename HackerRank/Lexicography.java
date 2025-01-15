@@ -7,5 +7,10 @@ public class Lexicography {
         Scanner scan= new Scanner(System.in);
         String word1= scan.next();
         String word2= scan.next();
+        int wordSum= word1.length()+word2.length();
+
+      /*  for(int i=0;i<word1.length();i++){
+
+        }*/
     }
 }
