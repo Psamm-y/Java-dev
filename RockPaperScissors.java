@@ -128,7 +128,7 @@ public void setUserSelection(int userSelection) {
         }else if(rps.getUserSelection()==2){
             System.out.println(showHelp());
         } else if (rps.getUserSelection()==3) {
-            System.out.println("Game succesfully ended.");
+            System.out.println("Game successfully ended.");
         }else{
             System.out.println("Please enter a valid option");
         }
