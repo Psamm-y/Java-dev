@@ -61,30 +61,39 @@ public void setUserSelection(int userSelection) {
             String userC= rps.getUserChoice();
             String compC= rps.getComputerChoice();
             int rounds=7;
-            int userScore;
-            int compScore
+            int userScore=0;
+            int compScore=0;
             while(rounds<=7){
                 if (userC.equalsIgnoreCase("r")&&compC.equalsIgnoreCase("p")){
-                    System.out.println("Paper beats rock. Computer wins");
+                    System.out.println("Paper beats rock. Computer wins\n" +
+                            "rounds left: "+rounds);
+                    compScore++;
                     rounds++;
                 } else if (userC.equalsIgnoreCase("p")&&compC.equalsIgnoreCase("r")) {
-                    System.out.println("Paper beats rock. User ins");
+                    System.out.println("Paper beats rock. User wins" +
+                            "rounds left:+rounds");
                     rounds++;
                 } else if (userC.equalsIgnoreCase("r")&&compC.equalsIgnoreCase("s")) {
-                    System.out.println("Rock beats Scissors. User wins");
+                    System.out.println("Rock beats Scissors. User wins" +
+                            "rounds left: "+rounds);
                     rounds++;
                 } else if (userC.equalsIgnoreCase("s")&&compC.equalsIgnoreCase("r")) {
-                    System.out.println("Rock beats Scissors. Computer wins.");
+                    System.out.println("Rock beats Scissors. Computer wins" +
+                            "rounds left: "+rounds);
+                    compScore++;
                     rounds++;
                 }else if(userC.equalsIgnoreCase("s")&&compC.equalsIgnoreCase("p")){
-                    System.out.println("Scissors beats paper. User wins");
+                    System.out.println("Scissors beats paper. User wins" +
+                            "rounds left: "+rounds);
                     rounds++;
                 }else if(userC.equalsIgnoreCase("p")&&compC.equalsIgnoreCase("s")){
-                    System.out.println("Scissors beats paper. Computer wins");
+                    System.out.println("Scissors beats paper. Computer wins" +
+                            "rounds left: "+rounds);
+                    compScore++;
                     rounds++;
                 }else if(userC.equalsIgnoreCase(compC)){
-                    System.out.println("Tie");
-                    rounds++;
+                    System.out.println("Tie" +
+                            "rounds left: "+rounds);
                 }else {
                     System.out.println("Please enter a valid choice");
 
