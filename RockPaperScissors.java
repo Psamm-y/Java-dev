@@ -51,59 +51,69 @@ public void setUserSelection(int userSelection) {
         rps.setUserSelection(scan.nextInt());
 
         if (rps.getUserSelection()==1){ //Game starts here!
+            int rounds=1;
+            int userScore=0;
+            int compScore=0;
+            while(rounds<=7){
             String[] options= {"r", "p", "s"};
             int randomIndex =rand.nextInt(options.length); //generate random index form 0 to array length
             rps.setComputerChoice(options[randomIndex]); //set the computer's choice to a random index in the array
+
+
             System.out.println("Rock, Paper, Scissors! Please enter your choice");
             rps.setUserChoice(scan.next()); //trim removes whitespaces
 
             String userC= rps.getUserChoice();
             char compC= rps.getComputerChoice().charAt(0);
-            int rounds=7;
-            int userScore=0;
-            int compScore=0;
-            while(rounds<=7){
-                if (userC.equalsIgnoreCase("r")&&compC.equalsIgnoreCase("p")){
+
+
+
+                if (userC.equalsIgnoreCase("r")&&compC=='r'){
+                    compScore++;
+                    rounds++;
                     System.out.println("Computer's choice:"+ rps.getComputerChoice());
                     System.out.println("Paper beats rock. Computer wins\n" +
-                            "rounds left: "+rounds);
+                            "rounds left: "+(7-rounds));
+
+                } else if (userC.equalsIgnoreCase("p")&&compC=='r') {
+                    userScore++;
+                    rounds++;
+                    System.out.println("Computer's choice:"+ rps.getComputerChoice());
+                    System.out.println("Paper beats rock. User wins\n" +
+                            "rounds left:"+(7-rounds));
+
+                } else if (userC.equalsIgnoreCase("r")&&compC=='s') {
+                    userScore++;
+                    rounds++;
+                    System.out.println("Computer's choice:"+ rps.getComputerChoice());
+                    System.out.println("Rock beats Scissors. User wins\n" +
+                            "rounds left: "+(7-rounds));
+
+                } else if (userC.equalsIgnoreCase("s")&&compC=='r') {
                     compScore++;
                     rounds++;
-                } else if (userC.equalsIgnoreCase("p")&&compC.equalsIgnoreCase("r")) {
                     System.out.println("Computer's choice:"+ rps.getComputerChoice());
-                    System.out.println("Paper beats rock. User wins" +
-                            "rounds left:+rounds");
+                    System.out.println("Rock beats Scissors. Computer wins\n" +
+                            "rounds left: "+(7-rounds));
+
+                }else if(userC.equalsIgnoreCase("s")&&compC=='p'){
                     userScore++;
                     rounds++;
-                } else if (userC.equalsIgnoreCase("r")&&compC.equalsIgnoreCase("s")) {
                     System.out.println("Computer's choice:"+ rps.getComputerChoice());
-                    System.out.println("Rock beats Scissors. User wins" +
-                            "rounds left: "+rounds);
-                    userScore++;
-                    rounds++;
-                } else if (userC.equalsIgnoreCase("s")&&compC.equalsIgnoreCase("r")) {
-                    System.out.println("Computer's choice:"+ rps.getComputerChoice());
-                    System.out.println("Rock beats Scissors. Computer wins" +
-                            "rounds left: "+rounds);
-                    userScore++;
+                    System.out.println("Scissors beats paper. User wins\n" +
+                            "rounds left: "+(7-rounds));
+
+                }else if(userC.equalsIgnoreCase("p")&&compC=='s'){
                     compScore++;
                     rounds++;
-                }else if(userC.equalsIgnoreCase("s")&&compC.equalsIgnoreCase("p")){
                     System.out.println("Computer's choice:"+ rps.getComputerChoice());
-                    System.out.println("Scissors beats paper. User wins" +
-                            "rounds left: "+rounds);
-                    userScore++;
-                    rounds++;
-                }else if(userC.equalsIgnoreCase("p")&&compC.equalsIgnoreCase("s")){
+                    System.out.println("Scissors beats paper. Computer wins\n" +
+                            "rounds left: "+(7-rounds));
+
+                }else if(userC.equalsIgnoreCase(String.valueOf(compC))){
                     System.out.println("Computer's choice:"+ rps.getComputerChoice());
-                    System.out.println("Scissors beats paper. Computer wins" +
-                            "rounds left: "+rounds);
-                    compScore++;
-                    rounds++;
-                }else if(userC.equalsIgnoreCase(compC)){
-                    System.out.println("Computer's choice:"+ rps.getComputerChoice());
-                    System.out.println("Tie" +
-                            "rounds left: "+rounds);
+                    System.out.println("Tie\n" +
+                            "rounds left: "+ (7-rounds));
                 }
                 System.out.println("User: "+userScore+"  Computer: "+compScore);
             }
