@@ -51,53 +51,69 @@ public void setUserSelection(int userSelection) {
         rps.setUserSelection(scan.nextInt());
 
         if (rps.getUserSelection()==1){ //Game starts here!
-            String[] options= {"Rock", "Paper", "Scissors"};
+            String[] options= {"r", "p", "s"};
             int randomIndex =rand.nextInt(options.length); //generate random index form 0 to array length
             rps.setComputerChoice(options[randomIndex]); //set the computer's choice to a random index in the array
             System.out.println("Rock, Paper, Scissors! Please enter your choice");
-            rps.setUserChoice(scan.next().trim()); //trim removes whitespaces
-            System.out.println("Computer's choice:"+ rps.getComputerChoice());
+            rps.setUserChoice(scan.next()); //trim removes whitespaces
 
             String userC= rps.getUserChoice();
-            String compC= rps.getComputerChoice();
+            char compC= rps.getComputerChoice().charAt(0);
             int rounds=7;
             int userScore=0;
             int compScore=0;
             while(rounds<=7){
                 if (userC.equalsIgnoreCase("r")&&compC.equalsIgnoreCase("p")){
+                    System.out.println("Computer's choice:"+ rps.getComputerChoice());
                     System.out.println("Paper beats rock. Computer wins\n" +
                             "rounds left: "+rounds);
                     compScore++;
                     rounds++;
                 } else if (userC.equalsIgnoreCase("p")&&compC.equalsIgnoreCase("r")) {
+                    System.out.println("Computer's choice:"+ rps.getComputerChoice());
                     System.out.println("Paper beats rock. User wins" +
                             "rounds left:+rounds");
+                    userScore++;
                     rounds++;
                 } else if (userC.equalsIgnoreCase("r")&&compC.equalsIgnoreCase("s")) {
+                    System.out.println("Computer's choice:"+ rps.getComputerChoice());
                     System.out.println("Rock beats Scissors. User wins" +
                             "rounds left: "+rounds);
+                    userScore++;
                     rounds++;
                 } else if (userC.equalsIgnoreCase("s")&&compC.equalsIgnoreCase("r")) {
+                    System.out.println("Computer's choice:"+ rps.getComputerChoice());
                     System.out.println("Rock beats Scissors. Computer wins" +
                             "rounds left: "+rounds);
+                    userScore++;
                     compScore++;
                     rounds++;
                 }else if(userC.equalsIgnoreCase("s")&&compC.equalsIgnoreCase("p")){
+                    System.out.println("Computer's choice:"+ rps.getComputerChoice());
                     System.out.println("Scissors beats paper. User wins" +
                             "rounds left: "+rounds);
+                    userScore++;
                     rounds++;
                 }else if(userC.equalsIgnoreCase("p")&&compC.equalsIgnoreCase("s")){
+                    System.out.println("Computer's choice:"+ rps.getComputerChoice());
                     System.out.println("Scissors beats paper. Computer wins" +
                             "rounds left: "+rounds);
                     compScore++;
                     rounds++;
                 }else if(userC.equalsIgnoreCase(compC)){
+                    System.out.println("Computer's choice:"+ rps.getComputerChoice());
                     System.out.println("Tie" +
                             "rounds left: "+rounds);
-                }else {
-                    System.out.println("Please enter a valid choice");
-
                 }
+                System.out.println("User: "+userScore+"  Computer: "+compScore);
+            }
+            if(userScore>compScore) {
+                System.out.println("User won!");
+            }
+                else if(userScore==compScore){
+                    System.out.println("Tie");
+                }else {
+                System.out.println("Computer won!");
             }
         }
 
