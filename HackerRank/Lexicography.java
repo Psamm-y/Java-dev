@@ -13,11 +13,12 @@ public class Lexicography {
         System.out.println(wordSum);
         String[] words= {A,B};
         System.out.println(Arrays.toString(words));
-        Arrays.sort(words);
+
+        Arrays.sort(words); //soerting arrays in lexicographical order
         System.out.println(Arrays.toString(words));
-        if (words[0]==A){
+        if (words[0]==A){ //checking whether 'A' still retains its position index
             System.out.println("No");
-        }else{
+        }else{ //else it's index changed
             System.out.println("Yes");
         }
 
