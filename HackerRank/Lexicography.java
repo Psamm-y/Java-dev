@@ -9,8 +9,9 @@ public class Lexicography {
         String word2= scan.next();
         int wordSum= word1.length()+word2.length();
 
-      /*  for(int i=0;i<word1.length();i++){
+        String[] words= {word1,word2};
 
-        }*/
+        
+
     }
 }
