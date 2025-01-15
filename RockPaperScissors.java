@@ -61,7 +61,7 @@ public void setUserSelection(int userSelection) {
 
 
             System.out.println("\nRock, Paper, Scissors! Please enter your choice");
-            rps.setUserChoice(scan.next()); //trim removes whitespaces
+            rps.setUserChoice(scan.next().trim()); //trim removes whitespaces
 
             String userC= rps.getUserChoice();
             char compC= rps.getComputerChoice().charAt(0);
