@@ -16,8 +16,8 @@ public class GradClass {
             System.out.println("You're a second class lower class student");
         }else if (gpa>=2.00||gpa<3.00){
             System.out.println("You're a third class student");
-        } else if () {
-
+        } else if (gpa>=1.50||gpa<2.00) {
+            System.out.println();
         }
     }
 }
