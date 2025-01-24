@@ -6,13 +6,18 @@ public class GradClass {
     public static void main (String [] args){
         Scanner scan= new Scanner(System.in);
         System.out.print("Please enter CGpa ");
-        double marks= scan.nextDouble();
+        double gpa= scan.nextDouble();
 
-        if(marks>3.6&&marks<=100){
+        if(gpa>=3.6&&gpa<=4.00){
             System.out.println("You're a first class student");
-        }else if(marks>=){
+        }else if(gpa>=3.00||gpa<3.6){
+            System.out.println("You're a second class upper student");
+        } else if (gpa>=2.5||gpa<3.00) {
+            System.out.println("You're a second class lower class student");
+        }else if (gpa>=2.00||gpa<3.00){
+            System.out.println("You're a third class student");
+        } else if () {
 
         }
-
     }
 }
