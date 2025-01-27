@@ -10,14 +10,17 @@ public class GradClass {
 
         if(gpa>=3.6&&gpa<=4.00){
             System.out.println("You're a first class student");
-        }else if(gpa>=3.00||gpa<3.6){
+        }else if(gpa>=3.00&&gpa<3.6){
             System.out.println("You're a second class upper student");
-        } else if (gpa>=2.5||gpa<3.00) {
+        } else if (gpa>=2.5&&gpa<3.00) {
             System.out.println("You're a second class lower class student");
-        }else if (gpa>=2.00||gpa<3.00){
+        }else if (gpa>=2.00&&gpa<3.00){
             System.out.println("You're a third class student");
-        } else if (gpa>=1.50||gpa<2.00) {
-            System.out.println("You should've home");
+        } else if (gpa>=1.50&&gpa<2.00) {
+            System.out.println("Fourth class deeper");
+        }else{
+            System.out.println("You should've definitely stayed at home");
         }
+        
     }
 }
