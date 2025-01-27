@@ -22,5 +22,9 @@ public class GradClass {
             System.out.println("You should've definitely stayed at home");
         }
 
+        String [] myArr={"Sam","Opuni", "Appiah", "Fenuku"};
+        for (String i : myArr){
+            System.out.println(i+ " yhyh");
+        }
     }
 }
