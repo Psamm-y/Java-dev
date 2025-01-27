@@ -21,6 +21,6 @@ public class GradClass {
         }else{
             System.out.println("You should've definitely stayed at home");
         }
-        
+
     }
 }
