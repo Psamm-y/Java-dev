@@ -1,5 +1,8 @@
 package Javadev;
 
+import java.time.LocalDateTime;
+import java.time.chrono.ChronoLocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class GradClass {
@@ -26,5 +29,13 @@ public class GradClass {
         for (String i : myArr){
             System.out.println(i+ " yhyh");
         }
+
+        LocalDateTime myInitialDate = LocalDateTime.now();
+        System.out.println("Before formatting: "+ myInitialDate);
+
+        DateTimeFormatter myformattedDate= DateTimeFormatter.ofPattern("dd-mm-yyyy HH:mm:ss");
+
+        String finalDate = 
+
     }
 }
