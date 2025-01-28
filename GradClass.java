@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.chrono.ChronoLocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class GradClass {
@@ -41,6 +42,14 @@ public class GradClass {
         //Formatting time & Date
         String finalDate = myInitialTime.format(myformattedTime);
         System.out.println(finalDate);
+
+        //Creating an ArrayList object(cars)
+        ArrayList<String> cars= new ArrayList<>();
+        cars.add("Lambo");
+        cars.add("Tesla");
+        cars.add("BMW");
+        cars.add("Volvo");
+        System.out.println(cars);
 
     }
 }
