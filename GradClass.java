@@ -1,6 +1,7 @@
 package Javadev;
 
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.chrono.ChronoLocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
@@ -25,17 +26,21 @@ public class GradClass {
             System.out.println("You should've definitely stayed at home");
         }
 
+        //Shorthand or
         String [] myArr={"Sam","Opuni", "Appiah", "Fenuku"};
         for (String i : myArr){
             System.out.println(i+ " yhyh");
         }
 
-        LocalDateTime myInitialDate = LocalDateTime.now();
-        System.out.println("Before formatting: "+ myInitialDate);
+        //Date and Time package
+        LocalTime myInitialTime = LocalTime.now();
+        System.out.println("Before formatting: "+ myInitialTime);
 
-        DateTimeFormatter myformattedDate= DateTimeFormatter.ofPattern("dd-mm-yyyy HH:mm:ss");
+        DateTimeFormatter myformattedTime= DateTimeFormatter.ofPattern("hh:mm:ss");
 
-        String finalDate = 
+        //Formatting time & Date
+        String finalDate = myInitialTime.format(myformattedTime);
+        System.out.println(finalDate);
 
     }
 }
