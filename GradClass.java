@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class GradClass {
     public static void main (String [] args){
-        Scanner scan= new Scanner(System.in);
+       /* Scanner scan= new Scanner(System.in);
         System.out.print("Please enter CGpa: ");
         double gpa= scan.nextDouble();
 
@@ -25,7 +25,7 @@ public class GradClass {
             System.out.println("Fourth class deeper");
         }else{
             System.out.println("You should've definitely stayed at home");
-        }
+        }*/
 
         //Shorthand or
         String [] myArr={"Sam","Opuni", "Appiah", "Fenuku"};
@@ -44,12 +44,26 @@ public class GradClass {
         System.out.println(finalDate);
 
         //Creating an ArrayList object(cars)
-        ArrayList<String> cars= new ArrayList<>();
+        ArrayList<String> cars= new ArrayList<String>();
         cars.add("Lambo");
         cars.add("Tesla");
         cars.add("BMW");
         cars.add("Volvo");
-        System.out.println(cars);
+        cars.add(1,"Toyota");
 
+        System.out.println(cars);
+        System.out.println(cars.get(3));
+        cars.set(3,"Opel");
+        System.out.println(cars);
+        cars.remove(4);
+        System.out.println(cars);
+        System.out.println(cars.size());
+
+        //Looping through an ArrayList
+        for(String num: cars){
+            System.out.println("Car Name: "+num);
+        }
+
+        ArrayList<Integer> myInts= new ArrayList<Integer>();
     }
 }
