@@ -64,7 +64,7 @@ public class Student {
                     double grade = input.nextDouble();
                     student.setGrade(grade);
                     System.out.println("Adding student...");
-
+                    gt.addStudent(new Student(name,grade));
                     break;
                 case 2:
                     System.out.println("Removing student...");
