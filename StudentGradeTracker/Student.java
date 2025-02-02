@@ -22,9 +22,14 @@ public class Student {
 
     public void setGrade(double grade) {
         if (grade<0.0){
-            throw new IllegalArgumentException("Grade shoud be greater than zero")
+            throw new IllegalArgumentException("Grade shoud be greater than zero");
         }
         this.grade = grade;
+    }
+
+    public static void main(String[] args){
+        Student student =new Student("Samuel",12);
+        System.out.println(student);
     }
 
 }
