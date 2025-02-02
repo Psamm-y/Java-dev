@@ -54,10 +54,17 @@ public class Student {
 
             switch (userChoice){
                 case 1:
+                    System.out.print("Enter Student name: ");
                     System.out.println("Adding student...");
                     break;
                 case 2:
                     System.out.println("Removing student...");
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
                     break;
             }
         }
