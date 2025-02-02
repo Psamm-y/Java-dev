@@ -1,5 +1,6 @@
 package Javadev.StudentGradeTracker;
 
+import java.time.LocalDateTime;
 import java.util.Scanner;
 
 public class Student {
@@ -32,16 +33,18 @@ public class Student {
         this.grade = grade;
     }
 
+    public void options(){
+        System.out.printf("%s,%s%n","1.Add a student","2. Remove a student");
+    }
+
+
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         Student student =new Student();
 
-        try{
-            student.setGrade(-1);
-        }catch (IllegalArgumentException m){
-            System.out.println("Error: "+ m.getMessage());
-        }
-       // System.out.println(student);
+        System.out.println(LocalDateTime.now());
+        System.out.println("Welcome to the Student Grade Tracker!");
+
     }
 
 }
