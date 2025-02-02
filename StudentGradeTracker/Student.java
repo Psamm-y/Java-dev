@@ -1,5 +1,6 @@
 package Javadev.StudentGradeTracker;
 
+import java.time.DayOfWeek;
 import java.time.LocalDateTime;
 import java.util.Scanner;
 
@@ -39,6 +40,7 @@ public class Student {
         System.out.println("3. Display all students");
         System.out.println("4. Find Average Grade");
         System.out.println("5. Exit");
+        System.out.print("Enter your choice:");
     }
 
 
@@ -55,6 +57,11 @@ public class Student {
             switch (userChoice){
                 case 1:
                     System.out.print("Enter Student name: ");
+                    String name = input.nextLine();
+                    student.setName(name);
+                    System.out.print("Enter Student grade: ");
+                    double grade = input.nextDouble();
+                    student.setGrade(grade);
                     System.out.println("Adding student...");
                     break;
                 case 2:
