@@ -1,10 +1,11 @@
 package Javadev;
 
+import javax.security.auth.login.AccountLockedException;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.time.chrono.ChronoLocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class GradClass {
@@ -27,7 +28,7 @@ public class GradClass {
             System.out.println("You should've definitely stayed at home");
         }*/
 
-        //Shorthand or
+        //Shorthand for / for-each
         String [] myArr={"Sam","Opuni", "Appiah", "Fenuku"};
         for (String i : myArr){
             System.out.println(i+ " yhyh");
@@ -63,7 +64,13 @@ public class GradClass {
         for(String num: cars){
             System.out.println("Car Name: "+num);
         }
+        //Sorting an ArrayList
+        Collections.sort(cars);
 
+        System.out.println(cars);
+
+        //An integer ArrayList
+        //Nb: Unlike Arrays, elements in an ArrayList are objects
         ArrayList<Integer> myInts= new ArrayList<Integer>();
     }
 }
