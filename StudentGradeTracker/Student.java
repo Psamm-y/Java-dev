@@ -47,6 +47,7 @@ public class Student {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         Student student =new Student();
+        GradeTracker gt = new GradeTracker();
 
         System.out.println("Welcome to the Student Grade Tracker!");
 
@@ -63,6 +64,7 @@ public class Student {
                     double grade = input.nextDouble();
                     student.setGrade(grade);
                     System.out.println("Adding student...");
+
                     break;
                 case 2:
                     System.out.println("Removing student...");
