@@ -47,8 +47,20 @@ public class Student {
         Student student =new Student();
 
         System.out.println("Welcome to the Student Grade Tracker!");
-        student.options();
 
+        while (true){
+            student.options();
+            int userChoice= input.nextInt();
+
+            switch (userChoice){
+                case 1:
+                    System.out.println("Adding student...");
+                    break;
+                case 2:
+                    System.out.println("Removing student...");
+                    break;
+            }
+        }
     }
 
 }
