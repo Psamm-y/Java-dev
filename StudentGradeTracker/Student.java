@@ -34,7 +34,11 @@ public class Student {
     }
 
     public void options(){
-        System.out.printf("%s,%s%n","1.Add a student","2. Remove a student");
+        System.out.println("1. Add a Student");
+        System.out.println("2. Remove a Student");
+        System.out.println("3. Display all students");
+        System.out.println("4. Find Average Grade");
+        System.out.println("5. Exit");
     }
 
 
@@ -42,8 +46,8 @@ public class Student {
         Scanner input = new Scanner(System.in);
         Student student =new Student();
 
-        System.out.println(LocalDateTime.now());
         System.out.println("Welcome to the Student Grade Tracker!");
+        student.options();
 
     }
 
