@@ -42,10 +42,10 @@ public class Student {
         System.out.print("Enter your choice: ");
     }
 
-    gr
-    public String display(){
-
-
+    GradeTracker gt = new GradeTracker();
+    public void display(){
+        for(int i=0;i<gt.getStudentArr().size();i++){
+            System.out.println(gt.getStudentArr().get(i).toString());
     }
     }
 
@@ -72,7 +72,7 @@ public class Student {
                     System.out.println("Adding student...");
                     gt.addStudent(new Student(name,grade));
                     System.out.println("Student added successfully");
-                    System.out.println(gt.display());
+                    student.display();
                     break;
                 case 2:
                     System.out.print("Enter name  of student you want to remove: ");
