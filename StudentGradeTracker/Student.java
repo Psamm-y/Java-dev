@@ -43,6 +43,10 @@ public class Student {
         System.out.print("Enter your choice: ");
     }
 
+    public String toString(Student student){
+        return "Name: "+student.getName()+"\n"+
+                "Grade:"+ student.getGrade();
+    }
 
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
@@ -67,6 +71,7 @@ public class Student {
                     System.out.println("Adding student...");
                     gt.addStudent(new Student(name,grade));
                     System.out.println("Student added successfully");
+                    System.out.println(student.toString(student));
                     break;
                 case 2:
                     System.out.print("Enter name  of student you want to remove: ");
@@ -83,7 +88,10 @@ public class Student {
                 case 5:
                     break;
             }
+
             }
+        
         }
+
     }
 
