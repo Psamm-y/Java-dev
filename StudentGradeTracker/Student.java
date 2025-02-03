@@ -72,7 +72,7 @@ public class Student {
                     input.nextLine();
                     String removeName=input.nextLine();
                     System.out.println("Removing student...");
-                    gt.removeStudent("");
+                    gt.removeStudent(removeName);
                     break;
                 case 3:
                     break;

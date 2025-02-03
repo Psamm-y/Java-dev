@@ -14,7 +14,9 @@ public class GradeTracker {
 
    Student student= new Student();
    public void removeStudent(String name){
-       studentArr.remove(student);
+       if(name.equalsIgnoreCase(student.getName())){
+           studentArr.remove(student);
+       }
    }
     public static void main (String [] args){
 
