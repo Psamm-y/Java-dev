@@ -52,7 +52,6 @@ public class Student {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         Student student =new Student();
-        GradeTracker gt = new GradeTracker();
 
         System.out.println("Welcome to the Student Grade Tracker!");
 
@@ -70,7 +69,7 @@ public class Student {
                     double grade = input.nextDouble();
                     student.setGrade(grade);
                     System.out.println("Adding student...");
-                    gt.addStudent(new Student(name,grade));
+                    student.gt.addStudent(new Student(name,grade));
                     System.out.println("Student added successfully");
                     student.display();
                     break;
@@ -79,7 +78,7 @@ public class Student {
                     input.nextLine();
                     String removeName=input.nextLine();
                     System.out.println("Removing student...");
-                    gt.removeStudent(removeName);
+                    student.gt.removeStudent(removeName);
                     System.out.println("Student successfully removed");
                     break;
                 case 3:
