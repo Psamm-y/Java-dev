@@ -19,15 +19,10 @@ public class GradeTracker {
        }
    }
 
-   public String display(){
-       for (Student student: studentArr){
-       }
-       return "Name: "+student.getName()+
-               "\nGrade: "+student.getGrade();
+   public String toString(){
+       return "Name: "+ student.getName()+"\nGrade: "+student.getGrade();
    }
     public static void main (String [] args){
 
-       GradeTracker gt = new GradeTracker();
-        System.out.println(gt.studentArr);
     }
 }

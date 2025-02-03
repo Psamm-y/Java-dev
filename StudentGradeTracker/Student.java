@@ -42,9 +42,11 @@ public class Student {
         System.out.print("Enter your choice: ");
     }
 
-    public String toString(Student student){
-        return "Name: "+student.getName()+"\n"+
-                "Grade:"+ student.getGrade();
+    gr
+    public String display(){
+
+
+    }
     }
 
     public static void main(String[] args){
