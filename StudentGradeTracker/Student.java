@@ -66,10 +66,11 @@ public class Student {
                     student.setGrade(grade);
                     System.out.println("Adding student...");
                     gt.addStudent(new Student(name,grade));
-                   
-
                     break;
                 case 2:
+                    System.out.print("Enter name  of student you want to remove: ");
+                    input.nextLine();
+                    String removeName= input.nextLine();
                     System.out.println("Removing student...");
                     break;
                 case 3:
