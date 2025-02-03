@@ -18,6 +18,12 @@ public class GradeTracker {
            studentArr.remove(student);
        }
    }
+
+   public Student display(){
+       for (Student student: studentArr){
+       }
+       return student;
+   }
     public static void main (String [] args){
 
        GradeTracker gt = new GradeTracker();

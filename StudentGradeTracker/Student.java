@@ -1,7 +1,6 @@
 package Javadev.StudentGradeTracker;
 
-import java.time.DayOfWeek;
-import java.time.LocalDateTime;
+
 import java.util.Scanner;
 
 public class Student {
@@ -71,7 +70,7 @@ public class Student {
                     System.out.println("Adding student...");
                     gt.addStudent(new Student(name,grade));
                     System.out.println("Student added successfully");
-                    System.out.println(student.toString(student));
+                    System.out.println(gt.display());
                     break;
                 case 2:
                     System.out.print("Enter name  of student you want to remove: ");
@@ -90,7 +89,7 @@ public class Student {
             }
 
             }
-        
+
         }
 
     }
