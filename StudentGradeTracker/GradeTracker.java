@@ -19,10 +19,11 @@ public class GradeTracker {
        }
    }
 
-   public Student display(){
+   public String display(){
        for (Student student: studentArr){
        }
-       return student;
+       return "Name: "+student.getName()+
+               "\nGrade: "+student.getGrade();
    }
     public static void main (String [] args){
 
