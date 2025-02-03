@@ -12,10 +12,12 @@ public class GradeTracker {
        studentArr.add(student);
    }
 
-   public void removeStudent(Student student){
+   Student student= new Student();
+   public void removeStudent(String name){
        studentArr.remove(student);
    }
     public static void main (String [] args){
+
        GradeTracker gt = new GradeTracker();
         System.out.println(gt.studentArr);
     }

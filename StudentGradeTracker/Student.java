@@ -35,7 +35,7 @@ public class Student {
     }
 
     public void options(){
-        System.out.println("1. Add a Student");
+        System.out.println("\n1. Add a Student");
         System.out.println("2. Remove a Student");
         System.out.println("3. Display all students");
         System.out.println("4. Find Average Grade");
@@ -70,8 +70,9 @@ public class Student {
                 case 2:
                     System.out.print("Enter name  of student you want to remove: ");
                     input.nextLine();
-                    String removeName= input.nextLine();
+                    String removeName=input.nextLine();
                     System.out.println("Removing student...");
+                    gt.removeStudent("");
                     break;
                 case 3:
                     break;
