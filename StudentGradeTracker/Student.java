@@ -49,6 +49,10 @@ public class Student {
     }
     }
 
+    public String toString(){
+        return "Name: "+ getName()+"\nGrade: "+getGrade();
+    }
+
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         Student student =new Student();
@@ -89,7 +93,7 @@ public class Student {
                     break;
             }
 
-            
+
             }
 
         }

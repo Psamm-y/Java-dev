@@ -19,9 +19,7 @@ public class GradeTracker {
        }
    }
 
-   public String toString(){
-       return "Name: "+ student.getName()+"\nGrade: "+student.getGrade();
-   }
+
     public static void main (String [] args){
 
     }
