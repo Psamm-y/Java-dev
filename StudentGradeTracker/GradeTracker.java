@@ -12,11 +12,14 @@ public class GradeTracker {
        studentArr.add(student);
    }
 
-   Student student= new Student();
    public void removeStudent(String name){
-       if(name.equalsIgnoreCase(student.getName())){
-           studentArr.remove(student);
+       for (int i =0;i <studentArr.size();i++){
+           if(studentArr.get(i).getName().equalsIgnoreCase(name)){
+               studentArr.remove(i);
+               return;
+           }
        }
+       System.out.println("OOps");
    }
 
 
