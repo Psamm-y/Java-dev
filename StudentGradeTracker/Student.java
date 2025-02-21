@@ -86,7 +86,7 @@ public class Student {
                     student.gt.displayDetails();
                     break;
                 case 4:
-
+                    student.gt.averageGrade();
                     break;
                 case 5:
                     break;
