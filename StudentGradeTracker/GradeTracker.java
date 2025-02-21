@@ -35,11 +35,11 @@ public class GradeTracker {
    //Average grade method
     public double averageGrade(){
         double sum =0;
-        int number=getStudentArr().size();
+        int number=studentArr.size();
         for(Student student : studentArr){
             sum+=student.getGrade();
         }
-        return averageGrade()/number;
+        return sum/number;
     }
 
     public static void main (String [] args){
