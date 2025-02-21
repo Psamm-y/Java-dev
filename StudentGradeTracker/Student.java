@@ -45,13 +45,9 @@ public class Student {
     GradeTracker gt = new GradeTracker();
 
     public String toString(){
-        System.out.println("Students:\n");
-        System.out.println("----------------------------");
         return"{Name: "+ getName()+"\nGrade: "+getGrade()+"}";
     }
-    public double averageGrade(){
 
-    }
 
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
@@ -90,6 +86,7 @@ public class Student {
                     student.gt.displayDetails();
                     break;
                 case 4:
+
                     break;
                 case 5:
                     break;

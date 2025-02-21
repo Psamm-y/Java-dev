@@ -22,6 +22,8 @@ public class GradeTracker {
        System.out.println("OOps");
    }
    public void displayDetails(){
+       System.out.println("Students:\n");
+       System.out.println("----------------------------");
         if(studentArr.isEmpty()){
             System.out.println("No student record found");
         }
@@ -30,6 +32,15 @@ public class GradeTracker {
         }
    }
 
+   //Average grade method
+    public double averageGrade(){
+        double sum =0;
+        int number=getStudentArr().size();
+        for(Student student : studentArr){
+            sum+=student.getGrade();
+        }
+        return averageGrade()/number;
+    }
 
     public static void main (String [] args){
 
