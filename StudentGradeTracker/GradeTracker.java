@@ -23,7 +23,7 @@ public class GradeTracker {
    }
    public void displayDetails(){
        System.out.println("Students:");
-       System.out.println("---------------------------------\n");
+       System.out.println("---------------------------------");
         if(studentArr.isEmpty()){
             System.out.println("No student record found");
         }
