@@ -46,10 +46,11 @@ public class Student {
 
     public String toString(){
         System.out.println("Students:\n");
+        System.out.println("----------------------------");
         return"{Name: "+ getName()+"\nGrade: "+getGrade()+"}";
     }
     public double averageGrade(){
-        
+
     }
 
     public static void main(String[] args){
@@ -72,6 +73,7 @@ public class Student {
                     double grade = input.nextDouble();
                     student.setGrade(grade);
                     System.out.println("Adding student...");
+                    System.out.println("---------------------------------");
                     student.gt.addStudent(new Student(name,grade));
                     System.out.println("Student added successfully");
                     break;
@@ -80,6 +82,7 @@ public class Student {
                     input.nextLine();
                     String removeName=input.nextLine();
                     System.out.println("Removing student...");
+                    System.out.println("---------------------------------");
                     student.gt.removeStudent(removeName);
                     System.out.println("Student successfully removed");
                     break;
