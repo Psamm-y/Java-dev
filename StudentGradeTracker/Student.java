@@ -43,14 +43,10 @@ public class Student {
     }
 
     GradeTracker gt = new GradeTracker();
-    public void display(){
-        for(int i=0;i<gt.getStudentArr().size();i++){
-            System.out.println(gt.getStudentArr().get(i).toString());
-    }
-    }
 
     public String toString(){
-        return "Name: "+ getName()+"\nGrade: "+getGrade();
+        System.out.println("Students:\n");
+        return"{Name: "+ getName()+"\nGrade: "+getGrade()+"}";
     }
 
     public static void main(String[] args){
@@ -75,7 +71,6 @@ public class Student {
                     System.out.println("Adding student...");
                     student.gt.addStudent(new Student(name,grade));
                     System.out.println("Student added successfully");
-                    student.display();
                     break;
                 case 2:
                     System.out.print("Enter name  of student you want to remove: ");
@@ -86,6 +81,7 @@ public class Student {
                     System.out.println("Student successfully removed");
                     break;
                 case 3:
+                    student.gt.displayDetails();
                     break;
                 case 4:
                     break;

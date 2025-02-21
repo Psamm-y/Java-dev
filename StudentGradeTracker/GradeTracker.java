@@ -21,6 +21,14 @@ public class GradeTracker {
        }
        System.out.println("OOps");
    }
+   public void displayDetails(){
+        if(studentArr.isEmpty()){
+            System.out.println("No student record found");
+        }
+        for(Student student: studentArr){
+            System.out.println(student.toString());
+        }
+   }
 
 
     public static void main (String [] args){
