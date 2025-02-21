@@ -48,6 +48,9 @@ public class Student {
         System.out.println("Students:\n");
         return"{Name: "+ getName()+"\nGrade: "+getGrade()+"}";
     }
+    public double averageGrade(){
+        
+    }
 
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
