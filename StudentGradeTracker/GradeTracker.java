@@ -13,13 +13,16 @@ public class GradeTracker {
    }
 
    public void removeStudent(String name){
+
        for (int i =0;i <studentArr.size();i++){
            if(studentArr.get(i).getName().equalsIgnoreCase(name)){
                studentArr.remove(i);
                return;
+           }else{
+               System.out.println("Oops, student not found.");
            }
        }
-       System.out.println("OOps");
+
    }
    public void displayDetails(){
        System.out.println("Students:");
