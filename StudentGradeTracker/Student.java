@@ -77,10 +77,8 @@ public class Student {
                     System.out.print("Enter name  of student you want to remove: ");
                     input.nextLine();
                     String removeName=input.nextLine();
-                    System.out.println("Removing student...");
-                    System.out.println("---------------------------------");
+
                     student.gt.removeStudent(removeName);
-                    System.out.println("Student successfully removed");
                     break;
                 case 3:
                     student.gt.displayDetails();

@@ -15,11 +15,14 @@ public class GradeTracker {
    public void removeStudent(String name){
 
        for (int i =0;i <studentArr.size();i++){
-           if(studentArr.get(i).getName().equalsIgnoreCase(name)){
-               studentArr.remove(i);
-               return;
+           if(!(studentArr.get(i).getName().equalsIgnoreCase(name))){
+               System.out.println("Oops, record not found");
            }else{
-               System.out.println("Oops, student not found.");
+               System.out.println("Removing student...");
+               System.out.println("---------------------------------");
+               studentArr.remove(i);
+               System.out.println("Student successfully removed");
+               return;
            }
        }
 
