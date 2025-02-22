@@ -25,6 +25,7 @@ public class GradeTracker {
                return;
            }
        }
+       System.out.println("No student records available");
 
    }
    public void displayDetails(){
